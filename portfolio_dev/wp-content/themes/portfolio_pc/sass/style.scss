@@ -1,0 +1,195 @@
+/*
+Theme Name: PortfolioPC
+Author: Pete Cassell
+Description: Theme for personal web development portfolio
+Version: 1.0.0
+*/
+@import "compass";
+@import "compass/reset";
+
+//Import the partials
+@import "_partials/functions";
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+
+body{
+    margin: 0;
+}
+
+header{
+    position: absolute !important;
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.background-image-custom{
+    z-index: -1;
+}
+
+.title-section{
+    height: 420px;
+}
+/* 
+.about-me{
+    height: 420px;
+} */
+
+.full-height{
+    height:100%;
+}
+
+.section-heading{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: -50px;
+    z-index: 1;
+
+    .heading-text{
+        width: 90%;
+        text-align: center;
+        background-color: var(--e-global-color-secondary); 
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include media-breakpoint-up(sm){
+            width: 75%;
+        }
+
+        h2{
+            font-family: "Michroma", Sans-Serif;
+            color: white;
+            font-size: 50px;
+        }
+    }
+
+    .circle {
+        height: 140px;
+        width: 140px;
+        border-radius: 100%;
+        background-color: var(--e-global-color-accent);
+        position: absolute;
+        display: none;
+    }
+}
+
+.elementor-container{
+    height: 100%;
+}
+
+#test-carousel{
+    display:none !important;
+}
+
+//swiper slides custom style
+.swiper-slide{
+    height:100%;
+    .swiper-slide-inner{
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        :hover{
+            background-color: darken($color: white, $amount: 20%);
+        }
+
+        .link-wrapper{
+            height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        hr{
+            border: 0;
+            border-top: 1px solid var(--e-global-color-secondary);
+            width:75%;
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+        }
+
+        .slide-image-container{
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+
+            @include media-breakpoint-up(md){
+                height: 250px;
+            }
+         
+            img{
+                max-height: 100%;
+            }
+
+            .tag-container{
+                position: absolute;
+                top: 0px;
+                display: flex;
+                justify-content: end;
+                align-self: flex-end;
+                margin: 10px 5px 10px 5px;
+
+                .tag{
+                    border-radius: 5px;
+                    padding: 2px 5px;
+                    p{
+                        font-size: 0.5rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .tag-professional{
+                    background-color: var(--e-global-color-primary) ;
+                    color: white;
+                }
+                .tag-personal{
+                    background-color:var( --e-global-color-12f4273);
+                    color: white;
+                }
+            }
+        }
+        .slide-text-container{
+            //height: 30%;
+            /*flex-grow: 1;*/
+            text-align: left;
+
+            h2{
+                font-size: 1.2rem;
+                font-weight: 600;
+                font-family: "Michroma", Sans-Serif;
+                color: var(--e-global-color-primary);
+                text-align: center;
+                padding-bottom: 0.6em;
+            }
+
+            h4{
+                font-size: 0.8rem;
+                font-weight: 400;
+                font-family: "Michroma", Sans-Serif;
+                color: black;
+            }
+
+            p{
+                font-size: 0.6rem;
+                font-family: "Michroma", Sans-Serif;
+                color: var(--e-global-color-secondary);
+                padding-bottom: 5px;
+            }            
+        }
+    }
+}
+
+
+// .elementor-image-carousel.swiper-wrapper{
+//     height: 300px;
+// }
+
